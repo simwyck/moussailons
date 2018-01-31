@@ -3,5 +3,15 @@
   <h3>
     Ici, tu peux retrouver les moussaillons 🎓
   </h3>
+
+  <% @corsairs.each do |corsair| %>
+
+    <h2><%= corsair.first_name %></h2>
+    <p><%= corsair.age %></p>
+    <p><%= corsair.likeness %></p>
+    <p class="btn btn-primary"><%= link_to 'Show Corsair', corsair_path(corsair.id) %></p>
+
+  <% end %>
+  
   <%= link_to "Enregistre-toi !", '#', class: "btn btn-lg btn-primary" %>
 </div>

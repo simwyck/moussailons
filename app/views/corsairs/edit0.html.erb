@@ -20,6 +20,17 @@
 
 <div class="form-group">
 
+  <label>Likeness</label>
+
+  <%= radio_button_tag(:likeness, "kebab"), class: 'form-control' %>
+  <%= label_tag(:likeness_kebab, "I love Kebab"), class: 'form-control' %>
+  <%= radio_button_tag(:likeness, "hummus"), class: 'form-control' %>
+  <%= label_tag(:likeness_hummus, "I love Hummus"), class: 'form-control' %>
+
+</div>
+
+<div class="form-group">
+
   <button type="submit">Modify Corsair</button>
 
 </div>

@@ -1,13 +1,15 @@
-<h1>Your Gossip</h1>
+<h1>Corsair Profile of <%= @corsair.first_name %></h1>
 
-<p> <%= @gossip.anonymous_author %></p>
+<p> First name: <%= @corsair.first_name %></p>
 
-<p> <%= @gossip.content %></p>
+<p> Age: <%= @corsair.age %></p>
 
-<p><a href="<%= edit_gossip_path %>" class="btn btn-primary">Edit Gossip</a></p>
+<p> Likeness: <%= @corsair.likeness %></p>
 
-<p><a href="<%= @gossip %>" class="btn btn-danger" data-confirm="Sure about this?" data-method="DELETE">Delete Gossip</a></p>
+<p><a href="<%= edit_corsair_path %>" class="btn btn-primary">Edit Corsair</a></p>
 
-<p class="btn btn-danger"><%= link_to 'Delete Gossip (Felix style)', @gossip, method: :delete %></p>
+<p><a href="<%= @corsair %>" class="btn btn-danger" data-confirm="Sure about this?" data-method="DELETE">Delete Corsair</a></p>
 
-<p><a href="<%= gossips_path %>" class="btn btn-default">Back To More Gossips</a></p>
+<p class="btn btn-danger"><%= link_to 'Delete Corsair (Felix style)', @corsair, method: :delete %></p>
+
+<p><a href="<%= corsairs_path %>" class="btn btn-default">Back To More Corsairs</a></p>

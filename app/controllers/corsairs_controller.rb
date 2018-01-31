@@ -1,11 +1,14 @@
 class CorsairsController < ApplicationController
 
+    def index  
+    end
+
     def new
       @corsair = Corsair.new
     end
 
     def create
-      @corsair = Corsair.create(Corsair_params)
+      @corsair = Corsair.create(corsair_params)
       @corsair.save
       redirect_to @corsair
     end
@@ -22,20 +25,20 @@ class CorsairsController < ApplicationController
 
     def update
       @corsair = Corsair.find(params[:id])
-      @corsair.update(Corsair_params)
-      redirect_to Corsairs_path
+      @corsair.update(corsair_params)
+      redirect_to corsairs_path
     end
 
     def destroy
       @corsair = Corsair.find(params[:id])
       @corsair.destroy
-      redirect_to Corsairs_path
+      redirect_to corsairs_path
     end
 
-    privated
+    private
 
-    def Corsair_params
-      params.require(:Corsair).permit(:anonymous_author, :content)
+    def corsair_params
+      params.require(:corsair).permit(:first_name, :age, :likeness)
     end
 
 end

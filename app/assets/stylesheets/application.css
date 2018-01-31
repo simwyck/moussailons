@@ -13,3 +13,8 @@
  *= require_tree .
  *= require_self
  */
+
+ /* Pour éviter que le header ne recouvre le début de ta page */
+ body {
+     margin-top: 50px;
+ }
